@@ -195,6 +195,7 @@ defaultTasks("bundleJar")
 
 preprocess {
     val mc11903 = createNode("1.19.3", 11903, "yarn")
+    val mc11903Forge = createNode("1.19.3-forge", 11903, "srg")
     val mc11902 = createNode("1.19.2", 11902, "yarn")
     val mc11901 = createNode("1.19.1", 11901, "yarn")
     val mc11900 = createNode("1.19", 11900, "yarn")
@@ -218,6 +219,7 @@ preprocess {
     val mc10800 = createNode("1.8", 10800, "srg")
     val mc10710 = createNode("1.7.10", 10710, "srg")
 
+	mc11903Forge.link(mc11903)
     mc11903.link(mc11902, file("versions/mapping-fabric-1.19.3-1.19.2.txt"))
     mc11902.link(mc11901)
     mc11901.link(mc11900)
